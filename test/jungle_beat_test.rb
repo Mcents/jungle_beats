@@ -19,4 +19,17 @@ class JungleBeatTest < Minitest::Test
     assert jb.append("boop")
   end
 
+  def test_the_new_count
+    jb = JungleBeat.new
+    jb.append("deep doo ditt")
+    jb.append("woo hoo shu")
+    assert_equal 6, jb.count
+  end
+
+  def test_to_check_if_plays
+    jb = JungleBeat.new
+    jb.append("deep doo ditt")
+    assert_equal "deep doo ditt", jb.play 
+  end
+
 end

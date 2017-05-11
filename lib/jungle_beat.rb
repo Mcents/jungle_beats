@@ -10,13 +10,21 @@ class JungleBeat
 
 
   def append(words)
-    words
+    sep_words = words.split
+    sep_words.each do |word|
+      list.append(word)
+    end
   end
-  binding.pry
 
+  def count
+    list.count
+  end
 
+  def play
+    @rate = 150
+    @voice = "Karen"
 
-
-
-
+    `say -r #{@rate} -v #{@voice} #{list.to_string}`
+  end
+  #binding.pry
 end
