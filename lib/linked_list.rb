@@ -10,14 +10,14 @@ class LinkedList
   end
 
   def append(data)
-    current = @head
+    current_node = @head
     if @head == nil
       @head = Node.new(data)
     else
-      until current.next_node == nil
-        current = current.next_node
+      until current_node.next_node == nil
+        current_node = current_node.next_node
       end
-      current.next_node = Node.new(data)
+      current_node.next_node = Node.new(data)
      end
   end
 
@@ -33,10 +33,10 @@ class LinkedList
 
   def count
    counter = 1
-   current = @head
-   until current.next_node == nil
+   current_node = @head
+   until current_node.next_node == nil
      counter += 1
-     current = current.next_node
+     current_node = current_node.next_node
    end
    counter
   end
