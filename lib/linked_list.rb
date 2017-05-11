@@ -80,7 +80,7 @@ class LinkedList
   end
   false
   end
-  
+
 
   def find(place, return_amount)
     current_node = @head

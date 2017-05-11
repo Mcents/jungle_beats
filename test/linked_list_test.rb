@@ -40,8 +40,11 @@ class LinkedListTest < Minitest::Test
   def test_to_prepend
     linked_list = LinkedList.new
     linked_list.append("mike")
+    linked_list.append("bob")
+    linked_list.append("mary")
     linked_list.prepend("this should be first")
-    assert_equal "this should be first", linked_list.head.data
+    linked_list.prepend("this should actually really be first")
+    assert_equal "this should actually really be first", linked_list.head.data
   end
 
   def test_to_insert
